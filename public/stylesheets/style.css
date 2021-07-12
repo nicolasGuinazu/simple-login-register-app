@@ -1,0 +1,74 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.header{
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header a{
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+body{
+  background-color: #ccc;
+}
+
+.avatar{
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: brown;
+}
+
+.card{
+  border-radius: 5px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  margin-left: 25%;
+  background-color: rgb(0, 170, 170);
+  color: white;
+  align-items: center;
+  font-size: 2rem;
+}
+.card input{
+  border:none;
+  outline: none;
+  height: 30px;
+  width: 50%;
+}
+.card button{
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgb(0, 55, 128);
+  width: 30%;
+  height: 60%;
+  justify-content: center;
+  border:none;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.418);
+  margin-bottom: 10px;
+}
+
+button:hover{
+  background-color: rgb(39, 255, 1);
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}

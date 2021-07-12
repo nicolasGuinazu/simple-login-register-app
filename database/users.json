@@ -62,5 +62,11 @@
   {
     "id": 11,
     "name": "nico"
+  },
+  {
+    "id": 12,
+    "name": "zapas",
+    "email": "tra@hotmail.com",
+    "password": "123"
   }
 ]

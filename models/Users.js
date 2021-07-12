@@ -1,11 +1,11 @@
 
 const fs=require('fs')
-
+const path=require('path')
+const db=path.join(__dirname, '../database/users.json')
 
 let Users={
-    db:'../database/users.json',
     getUsers: function () {
-        return JSON.parse(fs.readFileSync(this.db,'utf-8'))
+        return JSON.parse(fs.readFileSync(db,'utf-8'))
     },
     findAll:function(){
         return this.getUsers()
@@ -39,12 +39,12 @@ let Users={
             ...data
         }
         allUsers.push(newUser);
-        fs.writeFileSync(this.db,JSON.stringify(allUsers,null,2))
+        fs.writeFileSync(db,JSON.stringify(allUsers,null,2))
     },
     delete:function(id){
         let allUsers=this.findAll()
         let newArray=allUsers.filter(el=>el.id!=id)
-        fs.writeFileSync(this.db,JSON.stringify(newArray,null,2))
+        fs.writeFileSync(db,JSON.stringify(newArray,null,2))
     },
 }
 

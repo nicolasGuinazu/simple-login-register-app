@@ -14,13 +14,13 @@ a {
   left: 0;
   width: 100%;
   height: 15%;
-  background-color: blueviolet;
+  background-color: rgb(43, 92, 226);
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 .header a{
-  color: black;
+  color: white;
   font-size: 2rem;
   cursor: pointer;
   text-decoration: none;
@@ -32,17 +32,24 @@ body{
 .avatar{
 
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin-top: 3%;
+  height: 70px;
+  width: 70px;
+  margin-top: 0.5%;
+  padding-bottom: 1%;
+  display: flex;
+}
+
+.avatar p{
+  color: white;
+  margin: auto;
+  font-size: 1rem;
 }
 .profile-image{
-  max-width: 100%;
-  max-height: 100%;
+/*   max-width: 100%;
+  max-height: 100%; */
   object-fit: contain;
   border-radius: 50%;
-
-
+  margin-right: 20%;
 }
 .card{
   border-radius: 5px;
@@ -59,18 +66,19 @@ body{
 .card input{
   border:none;
   outline: none;
-  height: 30px;
-  width: 50%;
+  width: 300px;
+  height: 50px;
+  font-size: 2rem;
 }
 .card button{
   cursor: pointer;
   border-radius: 5px;
   background-color: rgb(0, 55, 128);
-  width: 30%;
-  height: 60%;
+  width: 300px;
+  height: 100px;
   justify-content: center;
   border:none;
-  font-size: 1rem;
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.418);
   margin-bottom: 10px;
 }
@@ -78,7 +86,6 @@ body{
 button:hover{
   background-color: rgb(39, 255, 1);
   color: rgb(255, 255, 255);
-  font-size: 1.2rem;
 }
 
 .profile{

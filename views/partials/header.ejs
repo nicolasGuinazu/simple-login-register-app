@@ -3,8 +3,17 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <header class="header">
-    <a href="/users/login">Login</a>
-    <a href="/users/register">Register</a>
+  <% if (locals.isLogged) { %>
     <a href="/users/profile">Profile</a>
+    
+    <div class="avatar">
+      <img alt="avatar" src="/images/<%=locals.userLogged.avatar%>" class="profile-image">
+      <p>Hi <%=locals.userLogged.name%>!</p>
+    </div>
+    <%} else { %>
+      <a href="/users/login">Login</a>
+      <a href="/users/register">Register</a>
+      <% } %>
+   
 
   </header>

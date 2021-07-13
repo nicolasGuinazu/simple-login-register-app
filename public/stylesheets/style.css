@@ -30,12 +30,20 @@ body{
 }
 
 .avatar{
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  background-color: brown;
-}
 
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-top: 3%;
+}
+.profile-image{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+
+
+}
 .card{
   border-radius: 5px;
   width: 50%;
@@ -71,4 +79,8 @@ button:hover{
   background-color: rgb(39, 255, 1);
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
+}
+
+.profile{
+  margin-top: 5%;
 }

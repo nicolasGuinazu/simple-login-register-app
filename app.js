@@ -6,7 +6,7 @@ var logger = require('morgan');
 const session=require('express-session')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+let userLogedMiddleware=require('./middlewares/userLoggedMiddleware')
 var app = express();
 
 // view engine setup
@@ -23,6 +23,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }))
+app.use(userLogedMiddleware)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 

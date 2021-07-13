@@ -1,6 +1,7 @@
 const Users=require('../models/Users')
 const bcrypt=require('bcrypt')
 
+
 const userController={
     login:(req,res)=>{
         res.render('login')
@@ -28,9 +29,14 @@ const userController={
         let userToLogIn=Users.findByField('email',req.body.email)
         let passOk=bcrypt.compareSync(req.body.password,userToLogIn.password)
         if (passOk){
-            return res.send('todo ok!')//es con validaciones pero para testear
+            req.session.loggedUser=userToLogIn;
         }
-        res.send('not-ok')
+        return res.redirect('/')
     },
+    profile:(req,res)=>{
+
+    return res.render('profile',{user:req.session.loggedUser}) 
+      
+    }
 }
 module.exports=userController

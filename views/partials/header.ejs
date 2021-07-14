@@ -5,10 +5,12 @@
 <header class="header">
   <% if (locals.isLogged) { %>
     <a href="/users/profile">Profile</a>
+    <a href="/users/logout">Logout</a>
     
     <div class="avatar">
       <img alt="avatar" src="/images/<%=locals.userLogged.avatar%>" class="profile-image">
       <p>Hi <%=locals.userLogged.name%>!</p>
+      
     </div>
     <%} else { %>
       <a href="/users/login">Login</a>

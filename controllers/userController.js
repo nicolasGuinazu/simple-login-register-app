@@ -30,6 +30,9 @@ const userController={
         let passOk=bcrypt.compareSync(req.body.password,userToLogIn.password)
         if (passOk){
             req.session.loggedUser=userToLogIn;
+            if(req.body.remember){
+                res.cookie('userEmail',req.body.email,{maxAge:(1000*6)*2})
+            }
         }
         return res.redirect('/')
     },
@@ -37,6 +40,11 @@ const userController={
 
     return res.render('profile',{user:req.session.loggedUser}) 
       
+    },
+    logout:(req,res)=>{
+        res.clearCookie('userEmail');
+        req.session.destroy();
+        res.redirect('/')
     }
 }
 module.exports=userController

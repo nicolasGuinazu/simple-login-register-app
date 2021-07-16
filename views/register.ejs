@@ -6,19 +6,19 @@
     <div class="card">
     <h2>Register Form</h2>
     <label for="uname" id="un">Username:</label>
-    <input type="text" name="name" placeholder="Enter Username"><br/>
+    <input type="text" name="name" placeholder="Enter Username" value=<%=locals.old ? old.name : '' %>><br/>
     <% if (locals.errors && errors.name) { %>
-        <p><%=errors.name.msg %></p>
+        <p class="danger"><%=errors.name.msg %></p>
     <% } %>
     <label for="email" id="un">Email:</label>
-    <input type="email" name="email" placeholder="Enter Email" ><br/>
+    <input type="email" name="email" placeholder="Enter Email"  value=<%=locals.old ? old.email : ''  %>><br/>
     <% if (locals.errors && errors.email) { %>
-        <p><%=errors.email.msg %></p>
+        <p class="danger"><%=errors.email.msg %></p>
     <% } %>
     <label for="upass" id="ps">Password:</label>
     <input type="password" name="password" placeholder="Enter Password" ><br/>
     <% if (locals.errors && errors.password) { %>
-        <p><%=errors.password.msg %></p>
+        <p class="danger"><%=errors.password.msg %></p>
     <% } %>
     <button type="submit" value="Register">Register</button>
     </div>
@@ -26,5 +26,4 @@
     <input type="file" name="avatar"><br/>
     </form>
 
-    
     

@@ -98,3 +98,6 @@ button:hover{
 .check{
   font-size: 1px;
 }
+.danger{
+  color: red;
+}
